@@ -10,8 +10,6 @@ const messages = require('./myData');
 app.use(bodyParser.json());
 app.use(cors());
 
-// In-memory data store
-
 // GET request - Retrieve all messages
 app.get('/msg', (req, res) => {
     res.json(messages);
