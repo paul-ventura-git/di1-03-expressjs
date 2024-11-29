@@ -1,6 +1,6 @@
 // Methods to be executed on routes
 const method1 = (req, res)=>{
-    res.send("Hello, Welcome to our Page");
+    res.send('{ "beneficios": "Claro club" }');
 }
 
 const method2 = (req, res)=>{

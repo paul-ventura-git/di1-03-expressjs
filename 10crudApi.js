@@ -5,24 +5,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
 
+const messages = require('./myData');
+
 app.use(bodyParser.json());
 app.use(cors());
 
 // In-memory data store
-let messages = [
-    {
-        id: 1,
-        content: 'Hello World',
-        sender: 'Andres',
-        dateTime: ''
-    },
-    {
-        id: 2,
-        content: 'Hello Node',
-        sender: 'Ana',
-        dateTime: ''
-    }
-];
 
 // GET request - Retrieve all messages
 app.get('/msg', (req, res) => {
@@ -45,10 +33,9 @@ app.post('/msg', (req, res) => {
 app.put('/msg/:id', (req, res) => {
     const message =
         messages.find(
-            p =>
-                p.id === parseInt(req.params.id)
+            item => item.id === parseInt(req.params.id)
         );
-    if (!message) return res.status(404).send('Message not found.');
+    if (!message) return res.status(404).send('This message was not found.');
 
     message.content = req.body.content;
     message.sender = req.body.sender;
@@ -58,9 +45,11 @@ app.put('/msg/:id', (req, res) => {
 
 // DELETE request - Delete a post
 app.delete('/msg/:id', (req, res) => {
+  /*
     messages = messages
-        .filter(p => p.id !== parseInt(req.params.id));
+        .filter(item => item.id !== parseInt(req.params.id));    
     res.status(204).send();
+    */
 });
 
 // Start the server

@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.get('/', (req, res)=>{
     res.status(200);
-    res.send("Welcome to root URL of Server"); // Hacer http://localhost:3000
+    res.send("Welcome to root URL of Server"); // Hacer http://localhost:3000/
 });
 
 app.listen(PORT, (error) =>{

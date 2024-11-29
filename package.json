@@ -5,9 +5,10 @@
     "express": "^4.21.1",
     "expressjs": "file:",
     "morgan": "^1.10.0",
+    "myexpress": "file:",
     "nodemon": "^3.1.7"
   },
-  "name": "expressjs",
+  "name": "myexpress",
   "version": "1.0.0",
   "main": "01index.js",
   "scripts": {
@@ -15,5 +16,13 @@
   },
   "author": "Paul Ventura",
   "license": "ISC",
-  "description": "Express course"
+  "description": "Express course",
+  "repository": {
+    "type": "git",
+    "url": "di1-03-expressjs"
+  },
+  "keywords": [
+    "example",
+    "course"
+  ]
 }

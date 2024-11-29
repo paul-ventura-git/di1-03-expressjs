@@ -3,9 +3,10 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+
 app.post('/', (req, res)=>{
     const {name} = req.body;
-    res.send(`Welcome ${name}`);
+    res.send("Welcome: " + name);
 })
 
 app.listen(PORT, (error) =>{

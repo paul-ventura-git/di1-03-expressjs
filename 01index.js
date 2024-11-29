@@ -8,7 +8,8 @@ const app = express();
 // Define routes and middleware here
 // ...
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+const MY_PORT = process.env.PORT || 3000;
+
+app.listen(MY_PORT, () => {
+    console.log(`Server running on port ${MY_PORT}`);
 });
