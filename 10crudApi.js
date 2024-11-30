@@ -21,6 +21,7 @@ app.post('/msg', (req, res) => {
         id: messages.length + 1,
         content: req.body.content,
         sender: req.body.sender,
+        recipient: req.body.recipient,
         dateTime: new Date().toISOString()
     };
     messages.push(newMessage);
@@ -42,12 +43,10 @@ app.put('/msg/:id', (req, res) => {
 });
 
 // DELETE request - Delete a post
-app.delete('/msg/:id', (req, res) => {
-  /*
-    messages = messages
-        .filter(item => item.id !== parseInt(req.params.id));    
-    res.status(204).send();
-    */
+app.delete('/msg/:id', (req, res) => {  
+  messages = messages
+      .filter(item => item.id !== parseInt(req.params.id));    
+  res.status(204).send();  
 });
 
 // Start the server
