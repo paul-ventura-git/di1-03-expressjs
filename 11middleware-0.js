@@ -1,7 +1,7 @@
 // Middleware functions are functions that have access to:
 //  the request object (req), 
 //  the response object (res), 
-//  and the next function 
+//  and the "next()" function 
 // in the application’s request-response cycle. 
 // The next function is a function in the Express router which, when invoked, 
 // executes the middleware succeeding the current middleware.
@@ -22,6 +22,11 @@ app.listen(3000)
 
 // Configurable middleware can be used as shown below.
 
-const mw = require('./my-middleware.js')
+/*
+const mw = require('./myMiddleware.js')
 
 app.use(mw({ option1: '1', option2: '2' }))
+
+app.listen(3000)
+
+*/
