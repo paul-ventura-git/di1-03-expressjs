@@ -3,7 +3,6 @@ const app = express()
 
 const myLogger = function (req, res, next) {
   console.log('Request URL:', req.url)  
-  console.log(req.rawHeaders)
   console.log('LOGGED')
   next()
 }
